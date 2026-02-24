@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Hiola</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #1C1C1E;
+            background: #FFFFFF;
+            line-height: 1.6;
+            padding: 24px;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #00B894; }
+        h2 { font-size: 20px; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
+        p, li { font-size: 16px; margin-bottom: 12px; }
+        ul { padding-left: 24px; margin-bottom: 16px; }
+        .subtitle { font-size: 14px; color: #8E8E93; margin-bottom: 32px; }
+        a { color: #00B894; }
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #E5E5EA; font-size: 13px; color: #8E8E93; }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Last updated: February 24, 2026</p>
+
+    <p>Hiola ("we", "us", "our") is a chat app that translates messages automatically so everyone reads in their own language. Your privacy matters to us. This policy explains what data we collect, how we use it, and your rights.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p><strong>Account information:</strong> When you sign up, we collect your phone number (for authentication), display name, preferred language, and age range. Your phone number is verified via Firebase Authentication.</p>
+    <p><strong>Messages:</strong> Text messages you send are stored in our database (Google Cloud Firestore) so they can be delivered to recipients and translated. Messages include the original text and translations in each recipient's language.</p>
+    <p><strong>Photos:</strong> Photos you share in chats are uploaded to Google Cloud Storage and accessible to chat members.</p>
+    <p><strong>Contacts:</strong> If you grant permission, we access your device contacts to help you find people already on Hiola. We only read names and phone numbers. We do not upload or store your full contact list on our servers — we query against existing Hiola users only.</p>
+    <p><strong>Device information:</strong> We collect your push notification token (FCM token) to deliver message notifications. We do not collect device identifiers, location, or browsing data.</p>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+        <li><strong>Deliver messages:</strong> Your messages are stored and delivered to chat recipients.</li>
+        <li><strong>Translate messages:</strong> Message text is sent to our translation service (powered by Anthropic's Claude API) to generate translations. The translation service processes message text to produce translations and does not retain your messages after processing.</li>
+        <li><strong>Send notifications:</strong> We use your FCM token to send push notifications when you receive new messages.</li>
+        <li><strong>Find contacts:</strong> Phone numbers from your contacts are compared against Hiola users to show you who is already on the app.</li>
+        <li><strong>Age-appropriate language:</strong> Your age range is used to adjust translation tone (simpler language for children, warmer language for older users). It is never shared publicly.</li>
+    </ul>
+
+    <h2>3. Translation and AI</h2>
+    <p>Messages are translated using Anthropic's Claude AI via a secure server-side API call. Your message text and the recipient's age range are sent to the API for translation. Anthropic does not use your messages to train AI models. We do not store translation API logs beyond what is needed for error debugging.</p>
+
+    <h2>4. Data Storage and Security</h2>
+    <p>Your data is stored on Google Cloud (Firebase) servers. All data is transmitted over HTTPS. Firebase Authentication secures your account. Firestore security rules ensure only authenticated users can access their own data and chats they belong to.</p>
+    <p>We do not sell, rent, or share your personal data with third parties for marketing purposes.</p>
+
+    <h2>5. Data Retention</h2>
+    <p>Your messages and account data are retained as long as your account is active. When you delete your account (available in Settings), we permanently delete:</p>
+    <ul>
+        <li>Your user profile and personal information</li>
+        <li>Your profile photo</li>
+        <li>Your membership in all chats</li>
+        <li>DM conversations where you are a participant</li>
+    </ul>
+    <p>Messages you sent in group chats may remain visible to other group members after account deletion.</p>
+
+    <h2>6. Third-Party Services</h2>
+    <p>We use the following third-party services:</p>
+    <ul>
+        <li><strong>Firebase (Google):</strong> Authentication, database, file storage, push notifications, and cloud functions. <a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a></li>
+        <li><strong>Anthropic (Claude API):</strong> Message translation. <a href="https://www.anthropic.com/privacy">Anthropic Privacy Policy</a></li>
+    </ul>
+
+    <h2>7. Children's Privacy</h2>
+    <p>Hiola is designed for family use, including children. We do not knowingly collect personal information from children under 13 without parental consent. If a child under 13 uses Hiola, we expect a parent or guardian has set up their account. If you believe a child under 13 has created an account without parental consent, please contact us.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>You can:</p>
+    <ul>
+        <li>View and edit your profile information in the app (Settings)</li>
+        <li>Delete your account and all associated data (Settings > Delete Account)</li>
+        <li>Revoke contacts access in your device settings at any time</li>
+    </ul>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. We will notify users of significant changes through the app. The "Last updated" date at the top reflects the most recent revision.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have questions about this privacy policy or your data, contact us at:</p>
+    <p><strong>Email:</strong> <a href="mailto:privacy@hiola.app">privacy@hiola.app</a></p>
+    <p><strong>Developer:</strong> Elena Zobak LLC</p>
+
+    <div class="footer">
+        <p>&copy; 2026 Elena Zobak LLC. All rights reserved.</p>
+    </div>
+</body>
+</html>
